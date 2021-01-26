@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>BookJournal</title>
+
+    <style type="text/css">
+      body {
+        background-color: #f0f0f0 !important;
+      }
+
+      .logo {
+        background-image: url('%PUBLIC_URL%/icon-monotone-light.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50vw 50vh;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #222222 !important;
+        }
+
+        .logo {
+          background-image: url('%PUBLIC_URL%/icon-monotone-dark.svg');
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root">
+      <div class="logo"></div>
+    </div>
+  </body>
+</html>

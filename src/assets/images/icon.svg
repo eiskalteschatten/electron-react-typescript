@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="1024" height="1024" viewBox="0, 0, 1024, 1024">
+  <g id="Background">
+    <rect x="0" y="0" width="1024" height="1024" fill="#000000" fill-opacity="0"/>
+  </g>
+  <defs>
+    <clipPath id="Clip_1">
+      <path d="M25.5,20.5 L998.5,20.5 L998.5,1003.5 L25.5,1003.5 z M512,42.5 C252.702,42.5 42.5,252.702 42.5,512 C42.5,771.298 252.702,981.5 512,981.5 C771.298,981.5 981.5,771.298 981.5,512 C981.5,252.702 771.298,42.5 512,42.5 z"/>
+    </clipPath>
+    <filter id="Shadow_2">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="5" result="offsetblur"/>
+      <feFlood flood-color="#000000"/>
+      <feComposite in2="offsetblur" operator="in"/>
+    </filter>
+    <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="512" y1="42.5" x2="512" y2="981.5">
+      <stop offset="0" stop-color="#3E7AA5"/>
+      <stop offset="0" stop-color="#575757"/>
+      <stop offset="1" stop-color="#191919"/>
+    </linearGradient>
+    <linearGradient id="Gradient_2" gradientUnits="userSpaceOnUse" x1="512" y1="74" x2="512" y2="950">
+      <stop offset="0" stop-color="#3E7AA5"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0" stop-color="#5A5A5A"/>
+      <stop offset="1" stop-color="#2A2A2A"/>
+    </linearGradient>
+    <clipPath id="Clip_3">
+      <path d="M245.492,312.085 L513.015,312.085 L513.015,710.666 L245.492,710.666 z M394.615,320.092 C384.624,320.547 374.728,321.385 364.986,323.801 C322.763,334.271 288.033,361.794 251.492,383.957 L251.492,702.666 C334.583,651.082 398.496,618.376 507.015,674.798 L507.015,350.438 C471.732,333.909 434.13,319.702 394.615,320.092 z"/>
+    </clipPath>
+    <filter id="Shadow_4">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000"/>
+      <feComposite in2="offsetblur" operator="in"/>
+    </filter>
+    <linearGradient id="Gradient_3" gradientUnits="userSpaceOnUse" x1="379.254" y1="320.066" x2="379.254" y2="702.666">
+      <stop offset="0" stop-color="#F9F9F9"/>
+      <stop offset="1" stop-color="#CBCBCB"/>
+    </linearGradient>
+    <clipPath id="Clip_5">
+      <path d="M511.498,312.199 L778.508,312.199 L778.508,711.933 L511.498,711.933 z M636.987,320.199 C595.113,320.488 555.523,334.607 517.498,351.106 L517.498,676.065 C660.992,617.803 690.23,652.563 772.508,703.933 L772.508,384.668 C730.306,358.002 689.53,321.081 636.987,320.199 z"/>
+    </clipPath>
+    <filter id="Shadow_6">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000"/>
+      <feComposite in2="offsetblur" operator="in"/>
+    </filter>
+    <linearGradient id="Gradient_4" gradientUnits="userSpaceOnUse" x1="645.003" y1="320.169" x2="645.003" y2="703.933">
+      <stop offset="0" stop-color="#F9F9F9"/>
+      <stop offset="1" stop-color="#CBCBCB"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1">
+    <g>
+      <path d="M512,42.5 C771.298,42.5 981.5,252.702 981.5,512 C981.5,771.298 771.298,981.5 512,981.5 C252.702,981.5 42.5,771.298 42.5,512 C42.5,252.702 252.702,42.5 512,42.5 z" clip-path="url(#Clip_1)" filter="url(#Shadow_2)" fill="rgba(0,0,0,0.685)"/>
+      <path d="M512,981.5 C252.702,981.5 42.5,771.298 42.5,512 C42.5,252.702 252.702,42.5 512,42.5 C771.298,42.5 981.5,252.702 981.5,512 C981.5,771.298 771.298,981.5 512,981.5 z" fill="url(#Gradient_1)"/>
+    </g>
+    <path d="M512,950 C270.099,950 74,753.901 74,512 C74,270.099 270.099,74 512,74 C753.901,74 950,270.099 950,512 C950,753.901 753.901,950 512,950 z" fill="url(#Gradient_2)"/>
+    <g>
+      <g>
+        <path d="M394.615,320.092 C434.13,319.702 471.732,333.909 507.015,350.438 L507.015,674.798 C398.496,618.376 334.583,651.082 251.492,702.666 L251.492,383.957 C288.033,361.794 322.763,334.271 364.986,323.801 C374.728,321.385 384.624,320.547 394.615,320.092 z" clip-path="url(#Clip_3)" filter="url(#Shadow_4)" fill="rgba(0,0,0,0.75)"/>
+        <path d="M507.015,350.438 C376.492,288.28 334.626,332.716 251.492,383.957 L251.492,702.666 C334.583,651.082 398.496,618.376 507.015,674.798 L507.015,350.438 L507.015,350.438 z" fill="url(#Gradient_3)"/>
+      </g>
+      <g>
+        <path d="M636.987,320.199 C689.53,321.081 730.306,358.002 772.508,384.668 L772.508,703.933 C690.23,652.563 660.992,617.803 517.498,676.065 L517.498,351.106 C555.523,334.607 595.113,320.488 636.987,320.199 z" clip-path="url(#Clip_5)" filter="url(#Shadow_6)" fill="rgba(0,0,0,0.75)"/>
+        <path d="M517.498,351.106 L517.498,676.065 C660.992,617.803 690.23,652.563 772.508,703.933 L772.508,384.668 C690.23,333.555 663.903,287.579 517.498,351.106 L517.498,351.106 z" fill="url(#Gradient_4)"/>
+      </g>
+    </g>
+  </g>
+</svg>

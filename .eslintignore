@@ -1,0 +1,17 @@
+node_modules
+test/performance-results
+test/unit/data
+test-results
+
+*.spec.js
+jasmine-runner-api.js
+
+src/public/
+
+*.min.js
+
+glyph-iconset-master
+
+dist
+electron-dist
+build

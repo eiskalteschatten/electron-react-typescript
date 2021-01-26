@@ -1,0 +1,130 @@
+{
+  "name": "electron-react-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./public/electron.js",
+  "scripts": {
+    "build:react": "react-scripts build",
+    "build:electron": "tsc --project tsconfig.electron.json",
+    "prebuild": "npm run copyassets",
+    "build": "npm run build:react && npm run build:electron",
+    "copyassets": "node ./build-scripts/copyassets.js",
+    "prestart": "npm run copyassets && npm run build:electron",
+    "start": "concurrently \"BROWSER=none npm run start:react\" \"wait-on http://localhost:3000 && NODE_ENV=development electron .\"",
+    "start:react": "react-scripts start",
+    "test": "npm run lint",
+    "lint": "eslint './**/*.{tsx,ts,js}'",
+    "postinstall": "electron-builder install-app-deps",
+    "prepack": "npm run build",
+    "pack": "electron-builder --dir",
+    "pack:skipsigning": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run pack",
+    "predist": "npm run build",
+    "dist": "electron-builder",
+    "dist:skipsigning": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist",
+    "eject": "react-scripts eject"
+  },
+  "build": {
+    "productName": "ElectronReactTypesScript",
+    "copyright": "Copyright © 2021 Alex Seifert",
+    "appId": "com.alexseifert.electronReactTypesScript",
+    "buildDependenciesFromSource": true,
+    "files": [
+      "build"
+    ],
+    "directories": {
+      "buildResources": "build-resources"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.productivity",
+      "entitlements": "build-resources/entitlements.mac.plist",
+      "type": "development",
+      "darkModeSupport": true
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "tar.gz"
+      ],
+      "category": "Office"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build-resources/icon.ico"
+    }
+  },
+  "repository": "https://github.com/eiskalteschatten/electron-react-typescript.git",
+  "keywords": [],
+  "author": {
+    "name": "Alex Seifert",
+    "email": "alex@alexseifert.com"
+  },
+  "homepage": "./",
+  "license": "",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/user-event": "^10.4.1",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^12.19.11",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.15",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "concurrently": "^5.3.0",
+    "copyfiles": "^2.4.1",
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1",
+    "electron-devtools-installer": "^3.1.1",
+    "eslint": "^6.6.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^1.3.1",
+    "node-sass": "^4.14.1",
+    "typescript": "^4.1.3",
+    "wait-on": "^5.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "clsx": "^1.1.1",
+    "colorthief": "^2.3.2",
+    "iso-639-1": "^2.1.5",
+    "mkdirp": "^0.5.5",
+    "moment": "^2.29.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-intl": "^4.7.6",
+    "react-jss": "^10.5.0",
+    "react-redux": "^7.2.2",
+    "react-scripts": "^3.4.4",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^5.22.3",
+    "sequelize-migration-wrapper": "^0.1.1",
+    "sqlite3": "^5.0.0",
+    "uuid": "^3.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  }
+}
