@@ -4,7 +4,7 @@
     "moduleResolution": "node",
     "pretty": true,
     "sourceMap": true,
-    "target": "es6",
+    "target": "es2020",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowJs": true,
@@ -16,7 +16,6 @@
     "src/main/**/*.ts"
   ],
   "exclude": [
-    "build",
-    "node_modules"
+    "build"
   ]
 }
