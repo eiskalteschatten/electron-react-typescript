@@ -1,0 +1,17 @@
+.background {
+  background: #ffffff;
+  color: #000000;
+  font-size: 15;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background: #202124;
+    color: #ffffff;
+  }
+}
+
+.isDarwin {
+  padding-top: 22;
+}
