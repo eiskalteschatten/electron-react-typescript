@@ -1,7 +1,7 @@
 import { AnyAction, applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk, { ThunkDispatch } from 'redux-thunk';
 
-import app, { AppState } from './reducers/appReducer';
+import app from './reducers/appReducer';
 
 const devExtension = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
@@ -18,9 +18,7 @@ const store = createStore(
   )
 );
 
-export interface State {
-  app: AppState;
-}
+export type State = ReturnType<typeof reducer>;
 
 // Shortcuts
 export const dispatch: ThunkDispatch<any, any, AnyAction> = store.dispatch.bind(store);
