@@ -11,3 +11,4 @@ electron-dist
 build
 
 .build-cache
+.eslintcache
