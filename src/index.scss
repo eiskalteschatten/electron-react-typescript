@@ -4,6 +4,13 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
+  background-color: #f0f0f0;
+  color: #000000;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #222222 !important;
+    color: #f0f0f0 !important;
+  }
 }
 
 #root {
