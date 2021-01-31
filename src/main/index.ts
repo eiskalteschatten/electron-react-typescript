@@ -5,7 +5,7 @@ import './eventsFromRenderer';
 
 import config from '../config';
 import initializeRenderer from './initializeRenderer';
-import appMenu from '../menus/app';
+import appMenu from './menus/app';
 
 let app: Electron.App;
 const windows = new Set();
