@@ -1,5 +1,5 @@
 
 const { app, BrowserWindow } = require('electron');
-const Main = require('../build/main/Main').default;
+const main = require('../build/main').default;
 
-Main.main(app, BrowserWindow);
+main(app, BrowserWindow);
