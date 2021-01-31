@@ -40,9 +40,8 @@ export default class Main {
   }
 
   private static async onReady(): Promise<void> {
-
     if (process.env.NODE_ENV === 'development') {
-      const { default: installExtension, REDUX_DEVTOOLS } = require('electron-devtools-installer');  // eslint-disable-line @typescript-eslint/no-var-requires
+      const { default: installExtension, REDUX_DEVTOOLS } = await import('electron-devtools-installer');
       await installExtension(REDUX_DEVTOOLS);
     }
 
