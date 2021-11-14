@@ -19,3 +19,9 @@ for (const asset of assets) {
     console.log(`${src} was copied to ${dest}`);
   });
 }
+
+copyfiles(['./src/**/*.html', './build'], { up: 1 }, error => {
+  if (error) {
+    throw error;
+  }
+});

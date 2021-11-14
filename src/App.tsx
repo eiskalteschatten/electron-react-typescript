@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import EventsFromMain from './EventsFromMain';
 import { IntlProviderWrapper } from './intl/IntlContext';
 import MainLayout from './components/MainLayout';
 
@@ -10,7 +9,6 @@ const App: React.FC = () => {
 
   return (
     <>
-      <EventsFromMain />
       <IntlProviderWrapper injectedLocale={locale}>
         <MainLayout />
       </IntlProviderWrapper>

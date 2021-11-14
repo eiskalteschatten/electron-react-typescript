@@ -6,6 +6,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import App from './App';
 import store from './store';
 import * as serviceWorker from './serviceWorker';
+import './eventsFromMain';
 
 import './index.scss';
 
