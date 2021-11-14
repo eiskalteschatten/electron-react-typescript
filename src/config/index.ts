@@ -6,4 +6,7 @@ export default {
   updates: {
     url: 'update url',
   },
+  intl: {
+    defaultLocale: 'en',
+  },
 };
