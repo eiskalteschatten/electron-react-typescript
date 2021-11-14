@@ -112,10 +112,5 @@
     "react-scripts": "^4.0.3",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint"
-    }
   }
 }
