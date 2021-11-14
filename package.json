@@ -21,7 +21,8 @@
     "predist": "npm run build",
     "dist": "electron-builder",
     "dist:skipsigning": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "build": {
     "productName": "ElectronReactTypesScript",
