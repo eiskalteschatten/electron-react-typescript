@@ -15,8 +15,7 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    '@typescript-eslint',
-    'promise'
+    '@typescript-eslint'
   ],
   'settings': {
     'react': {
@@ -37,9 +36,6 @@ module.exports = {
     'prefer-const': ['error'],
     'arrow-parens': ['error', 'as-needed'],
     'no-param-reassign': 'off',
-    'promise/catch-or-return': 'error',
-    'promise/param-names': 'error',
-    'promise/no-return-wrap': 'error',
     'react/prop-types': 0,
     '@typescript-eslint/no-angle-bracket-type-assertion': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'],
