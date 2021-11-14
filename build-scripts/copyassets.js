@@ -4,7 +4,7 @@ const copyfiles = require('copyfiles');
 
 // These are assets that are used by Electron's main process and are therefore not packed by WebPack.
 const assets = [
-  ['src/assets/images/icon128.png', 'build/assets/images']
+  ['src/assets/images/icon128.png', 'build/assets/images'],
 ];
 
 for (const asset of assets) {

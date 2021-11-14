@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 
 import {
-  APP_PLATFORM
+  APP_PLATFORM,
 } from '../constants';
 
 export interface AppSetPlatform extends Action<typeof APP_PLATFORM> {

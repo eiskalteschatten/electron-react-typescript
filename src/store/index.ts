@@ -8,7 +8,7 @@ const devExtension = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers = devExtension && process.env.NODE_ENV === 'development' ? devExtension : compose;
 
 const reducer = combineReducers({
-  app
+  app,
 });
 
 const store = createStore(

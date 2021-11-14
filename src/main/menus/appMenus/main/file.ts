@@ -1,5 +1,3 @@
-import { BrowserWindow, MenuItem as ElectronMenuItem } from 'electron';
-
 import { MenuItem, nonMacPlatforms } from '../../menuBuilder';
 
 export default (): MenuItem => {

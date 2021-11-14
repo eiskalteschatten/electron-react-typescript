@@ -13,7 +13,7 @@ const MainLayout: React.FC = () => {
   return (
     <div
       className={clsx({
-        [styles.isDarwin]: platform === 'darwin'
+        [styles.isDarwin]: platform === 'darwin',
       })}
     >
       {platform === 'darwin' && (<Titlebar />)}
