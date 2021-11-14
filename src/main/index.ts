@@ -38,8 +38,8 @@ export default (_app: Electron.App): void => {
     initializeAppWindow.loadURL(initializeAppPath);
 
     if (process.env.NODE_ENV === 'development') {
-      const { default: installExtension, VUEJS_DEVTOOLS } = await import('electron-devtools-installer');
-      await installExtension(VUEJS_DEVTOOLS);
+      const { default: installExtension, REDUX_DEVTOOLS } = await import('electron-devtools-installer');
+      await installExtension(REDUX_DEVTOOLS);
     }
 
     openMainWindow();
