@@ -25,9 +25,9 @@
     "prepare": "husky install"
   },
   "build": {
-    "productName": "ElectronReactTypesScript",
+    "productName": "ElectronReactTypeScript",
     "copyright": "Copyright © 2021 Alex Seifert",
-    "appId": "com.alexseifert.electronReactTypesScript",
+    "appId": "com.alexseifert.electronReactTypeScript",
     "buildDependenciesFromSource": true,
     "files": [
       "build"
