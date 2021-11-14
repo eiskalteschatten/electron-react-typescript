@@ -21,7 +21,7 @@ export default (): MenuItem => {
     },
     {
       item: {
-        label: 'Glook on GitHub',
+        label: `${config.app.name} on GitHub`,
         click: (): void => {
           shell.openExternal('https://github.com/eiskalteschatten/Glook');
         },
