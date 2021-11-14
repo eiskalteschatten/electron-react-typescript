@@ -1,9 +1,8 @@
-// import { IpcRendererEvent } from 'electron';
+import { IpcRendererEvent } from 'electron';
 
-// import { dispatch } from '../store';
-// import { appSetPlatform } from '../store/actions/appActions';
+import { dispatch } from '../store';
+import { appSetPlatform } from '../store/actions/appActions';
 
-// window.api.on('appSetPlatform', (e: IpcRendererEvent, platform: string): any =>
-//   dispatch(appSetPlatform(platform)));
+window.api.on('appSetPlatform', (e: IpcRendererEvent, platform: string): any =>
+  dispatch(appSetPlatform(platform)));
 
-export {};
