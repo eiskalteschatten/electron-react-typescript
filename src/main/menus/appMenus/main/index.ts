@@ -1,4 +1,5 @@
 import { MenuItemConstructorOptions } from 'electron';
+import { t } from 'i18next';
 
 import menuBuilder from '../../menuBuilder';
 import appMenuItems from './app';
@@ -14,7 +15,7 @@ export default (): MenuItemConstructorOptions[] => {
     menuBuilder(viewMenuItems()),
     {
       role: 'windowMenu',
-      label: 'Window',
+      label: t('appMenu:window'),
     },
     menuBuilder(helpMenuItems()),
   ];

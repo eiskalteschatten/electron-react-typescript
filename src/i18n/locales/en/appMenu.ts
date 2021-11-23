@@ -26,4 +26,5 @@ export default {
   appOnGitHub: '{{appName}} on GitHub',
   submitFeedback: 'Submit Feedback',
   aboutAlexSeifert: 'About Alex Seifert',
+  window: 'Window',
 };
