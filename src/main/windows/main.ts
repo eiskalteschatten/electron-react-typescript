@@ -25,6 +25,10 @@ export default async (): Promise<BrowserWindow> => {
     backgroundColor: nativeTheme.shouldUseDarkColors ? '#111111' : '#f0f0f0',
   };
 
+  if (process.platform === 'darwin') {
+    browserWindowOptions.titleBarStyle = 'hidden';
+  }
+
   // if (preferences.windowX && preferences.windowY) {
   //   browserWindowOptions.x = preferences.windowX;
   //   browserWindowOptions.y = preferences.windowY;
@@ -33,10 +37,6 @@ export default async (): Promise<BrowserWindow> => {
   const newWindow = new BrowserWindow(browserWindowOptions);
 
   if (newWindow) {
-    if (process.platform === 'darwin') {
-      newWindow.setTrafficLightPosition({ x: 10, y: 20 });
-    }
-
     // if (preferences.windowIsMaximized) {
     //   newWindow.maximize();
     // }
