@@ -1,5 +1,6 @@
 import path from 'path';
 import { BrowserWindow } from 'electron';
+import log from 'electron-log';
 
 import './eventsFromRenderer';
 import './workers';
@@ -46,5 +47,5 @@ export default (_app: Electron.App): void => {
     openMainWindow();
 
     setTimeout(() => checkForUpdates(false), 3000);
-  }).catch(console.error);
+  }).catch(log.error);
 };
