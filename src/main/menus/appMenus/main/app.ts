@@ -27,7 +27,7 @@ export default (): MenuItem => {
         role: 'services',
         submenu: [],
         label: t('appMenu:services'),
-      } ,
+      },
     },
     { item: { type: 'separator' } },
     {
