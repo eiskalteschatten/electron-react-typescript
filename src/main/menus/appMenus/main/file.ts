@@ -1,15 +1,17 @@
+import { t } from 'i18next';
+
 import { MenuItem, nonMacPlatforms } from '../../menuBuilder';
 
 export default (): MenuItem => {
   const submenuItems: MenuItem[] = [
     {
       item: {
-        label: 'New',
+        label: t('appMenu:new'),
       },
       submenu: [
         {
           item: {
-            label: 'New Email',
+            label: t('appMenu:newEmail'),
             accelerator: 'CmdOrCtrl+N',
             click: async (): Promise<void> => {
               console.log('New Email');
@@ -22,14 +24,14 @@ export default (): MenuItem => {
     {
       platforms: ['darwin'],
       item: {
-        label: 'Close',
+        label: t('appMenu:close'),
         role: 'close',
       },
     },
     {
       platforms: nonMacPlatforms,
       item: {
-        label: 'Quit',
+        label: t('appMenu:quit'),
         role: 'quit',
       },
     },
@@ -37,7 +39,7 @@ export default (): MenuItem => {
 
   const menuItem: MenuItem = {
     item: {
-      label: 'File',
+      label: t('appMenu:file'),
     },
     submenu: submenuItems,
   };

@@ -17,4 +17,13 @@ export default {
   startSpeaking: 'Start Speaking',
   stopSpeaking: 'Stop Speaking',
   preferences: 'Preferences',
+  file: 'File',
+  new: 'New',
+  newEmail: 'New Email',
+  close: 'Close',
+  quit: 'Quit',
+  help: 'Help',
+  appOnGitHub: '{{appName}} on GitHub',
+  submitFeedback: 'Submit Feedback',
+  aboutAlexSeifert: 'About Alex Seifert',
 };

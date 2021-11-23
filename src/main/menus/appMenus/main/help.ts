@@ -1,4 +1,5 @@
 import { shell } from 'electron';
+import { t } from 'i18next';
 
 import config from '../../../../config';
 import checkForUpdates from '../../../lib/checkForUpdates';
@@ -9,7 +10,7 @@ export default (): MenuItem => {
     {
       platforms: ['win32'],
       item: {
-        label: 'Check for Updates...',
+        label: t('appMenu:checkForUpdates'),
         click: (): void => {
           checkForUpdates(true);
         },
@@ -21,15 +22,15 @@ export default (): MenuItem => {
     },
     {
       item: {
-        label: `${config.app.name} on GitHub`,
+        label: t('appMenu:appOnGitHub', { appName: config.app.name }),
         click: (): void => {
-          shell.openExternal('https://github.com/eiskalteschatten/Glook');
+          shell.openExternal('https://github.com/eiskalteschatten/electron-react-typescript/');
         },
       },
     },
     {
       item: {
-        label: 'Submit Feedback',
+        label: t('appMenu:submitFeedback'),
         click: (): void => {
           shell.openExternal('https://www.alexseifert.com/contact');
         },
@@ -37,7 +38,7 @@ export default (): MenuItem => {
     },
     {
       item: {
-        label: 'About Alex Seifert',
+        label: t('appMenu:aboutAlexSeifert'),
         click: (): void => {
           shell.openExternal('https://www.alexseifert.com');
         },
@@ -51,7 +52,7 @@ export default (): MenuItem => {
       platforms: nonMacPlatforms,
       item: {
         role: 'about',
-        label: `About ${config.app.name}`,
+        label: t('appMenu:aboutApp', { appName: config.app.name }),
       },
     },
   ];
@@ -59,7 +60,7 @@ export default (): MenuItem => {
   const menuItem: MenuItem = {
     item: {
       role: 'help',
-      label: 'Help',
+      label: t('appMenu:help'),
     },
     submenu: submenuItems,
   };
