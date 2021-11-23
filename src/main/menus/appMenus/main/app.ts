@@ -1,4 +1,5 @@
 import { app } from 'electron';
+import { t } from 'i18next';
 
 import config from '../../../../config';
 import checkForUpdates from '../../../lib/checkForUpdates';
@@ -9,12 +10,12 @@ export default (): MenuItem => {
     {
       item: {
         role: 'about',
-        label: `About ${config.app.name}`,
+        label: t('appMenu:aboutApp', { appName: config.app.name }),
       },
     },
     {
       item: {
-        label: 'Check for Updates...',
+        label: t('appMenu:checkForUpdates'),
         click: (): void => {
           checkForUpdates(true);
         },
@@ -25,33 +26,33 @@ export default (): MenuItem => {
       item: {
         role: 'services',
         submenu: [],
-        label: 'Services',
+        label: t('appMenu:services'),
       } ,
     },
     { item: { type: 'separator' } },
     {
       item: {
         role: 'hide',
-        label: `Hide ${config.app.name}`,
+        label: t('appMenu:hideApp', { appName: config.app.name }),
       },
     },
     {
       item: {
         role: 'hideOthers',
-        label: 'Hide Others',
+        label: t('appMenu:hideOthers'),
       },
     },
     {
       item: {
         role: 'unhide',
-        label: 'Show All',
+        label: t('appMenu:showAll'),
       },
     },
     { item: { type: 'separator' } },
     {
       item: {
         role: 'quit',
-        label: `Quit ${config.app.name}`,
+        label: t('appMenu:quitApp', { appName: config.app.name }),
       },
     },
   ];
