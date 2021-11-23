@@ -1,4 +1,5 @@
 // import { BrowserWindow, MenuItem as ElectronMenuItem } from 'electron';
+import { t } from 'i18next';
 
 import { MenuItem } from '../../menuBuilder';
 
@@ -6,38 +7,38 @@ export default (): MenuItem => {
   const submenuItems: MenuItem[] = [
     {
       item: {
-        label: 'Cut',
+        label: t('appMenu:cut'),
         role: 'cut',
       },
     },
     {
       item: {
-        label: 'Copy',
+        label: t('appMenu:copy'),
         role: 'copy',
       },
     },
     {
       item: {
-        label: 'Paste',
+        label: t('appMenu:paste'),
         role: 'paste',
       },
     },
     {
       platforms: ['darwin'],
       item: {
-        label: 'Paste and Match Style',
+        label: t('appMenu:pasteAndMatchStyle'),
         role: 'pasteAndMatchStyle',
       },
     },
     {
       item: {
-        label: 'Delete',
+        label: t('appMenu:delete'),
         role: 'delete',
       },
     },
     {
       item: {
-        label: 'Select All',
+        label: t('appMenu:selectAll'),
         role: 'selectAll',
       },
     },
@@ -48,18 +49,18 @@ export default (): MenuItem => {
     {
       platforms: ['darwin'],
       item: {
-        label: 'Speeche',
+        label: t('appMenu:speech'),
       },
       submenu: [
         {
           item: {
-            label: 'Start Speaking',
+            label: t('appMenu:startSpeaking'),
             role: 'startSpeaking',
           },
         },
         {
           item: {
-            label: 'Stop Speaking',
+            label: t('appMenu:stopSpeaking'),
             role: 'stopSpeaking',
           },
         },
@@ -72,7 +73,7 @@ export default (): MenuItem => {
     // {
     //   platforms: nonMacPlatforms,
     //   item: {
-    //     label: 'Preferences',
+    //     label: t('appMenu:preferences'),
     //     accelerator: 'Ctrl+,',
     //     click: (item: ElectronMenuItem, focusedWindow?: BrowserWindow): void => {
     //       focusedWindow?.webContents.send('open-preferences');
@@ -83,7 +84,7 @@ export default (): MenuItem => {
 
   const menuItem: MenuItem = {
     item: {
-      label: 'Edit',
+      label: t('appMenu:edit'),
     },
     submenu: submenuItems,
   };
