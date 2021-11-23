@@ -27,4 +27,10 @@ export default {
   submitFeedback: 'Submit Feedback',
   aboutAlexSeifert: 'About Alex Seifert',
   window: 'Window',
+  view: 'View',
+  actualSize: 'Actual Size',
+  zoomIn: 'Zoom In',
+  zoomOut: 'Zoom Out',
+  togglefullscreen: 'Toggle Full Screen',
+  development: 'Development',
 };

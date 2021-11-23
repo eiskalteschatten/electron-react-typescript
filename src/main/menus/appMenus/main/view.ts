@@ -1,22 +1,24 @@
+import { t } from 'i18next';
+
 import { MenuItem } from '../../menuBuilder';
 
 export default (): MenuItem => {
   const submenuItems: MenuItem[] = [
     {
       item: {
-        label: 'Actual Size',
+        label: t('appMenu:actualSize'),
         role: 'resetZoom',
       },
     },
     {
       item: {
-        label: 'Zoom In',
+        label: t('appMenu:zoomIn'),
         role: 'zoomIn',
       },
     },
     {
       item: {
-        label: 'Zoom Out',
+        label: t('appMenu:zoomOut'),
         role: 'zoomOut',
       },
     },
@@ -29,14 +31,14 @@ export default (): MenuItem => {
     {
       platforms: ['darwin'],
       item: {
-        label: 'Toggle Full Screen',
+        label: t('appMenu:togglefullscreen'),
         role: 'togglefullscreen',
       },
     },
     { item: { type: 'separator' } },
     {
       item: {
-        label: 'Development',
+        label: t('appMenu:development'),
       },
       submenu: [
         { item: { role: 'reload' } },
@@ -48,7 +50,7 @@ export default (): MenuItem => {
 
   const menuItem: MenuItem = {
     item: {
-      label: 'View',
+      label: t('appMenu:view'),
     },
     submenu: submenuItems,
   };
