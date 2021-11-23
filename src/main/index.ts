@@ -3,6 +3,7 @@ import { BrowserWindow } from 'electron';
 
 import './eventsFromRenderer';
 import './workers';
+import '../i18n';
 
 import config from '../config';
 import openMainWindow from './windows/main';
