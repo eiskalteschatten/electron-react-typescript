@@ -1,10 +1,10 @@
 import { Reducer } from 'redux';
 
-import { AppActions } from '../actions/appActions';
+import { Actions } from './actions';
 
 import {
-  APP_PLATFORM,
-} from '../constants';
+  SET_PLATFORM,
+} from './constants';
 
 export interface AppState {
   platform: string;
@@ -14,12 +14,12 @@ export const initialState: AppState = {
   platform: '',
 };
 
-const appReducer: Reducer<AppState, AppActions> = (
+const reducer: Reducer<AppState, Actions> = (
   state = initialState,
-  action: AppActions
+  action: Actions
 ): any => {
   switch (action.type) {
-    case APP_PLATFORM:
+    case SET_PLATFORM:
       return {
         ...state,
         platform: action.platform,
@@ -29,4 +29,4 @@ const appReducer: Reducer<AppState, AppActions> = (
   }
 };
 
-export default appReducer;
+export default reducer;

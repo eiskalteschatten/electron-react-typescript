@@ -1,7 +1,7 @@
 import { AnyAction, applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk, { ThunkDispatch } from 'redux-thunk';
 
-import app from './reducers/appReducer';
+import app from './app/reducers';
 
 const devExtension = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
