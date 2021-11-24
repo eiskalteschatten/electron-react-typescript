@@ -21,6 +21,12 @@ export default {
     version: '1.0.0',
     storagePath,
   },
+  windows: {
+    defaultBackgroundColors: {
+      dark: '#111111',
+      light: '#f0f0f0',
+    },
+  },
   updates: {
     url: 'https://api.github.com/repos/eiskalteschatten/electron-react-typescript/releases',
   },

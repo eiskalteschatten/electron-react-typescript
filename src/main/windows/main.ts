@@ -2,6 +2,7 @@ import { BrowserWindow, BrowserWindowConstructorOptions, Menu, nativeTheme, scre
 import path from 'path';
 import log from 'electron-log';
 
+import config from '../../config';
 import initializeRenderer from '../initializeRenderer';
 import getAppMenu from '../menus/appMenus/main';
 
@@ -22,7 +23,9 @@ export default async (): Promise<BrowserWindow> => {
       contextIsolation: true,
       preload: path.join(__dirname, '../preload.js'),
     },
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#111111' : '#f0f0f0',
+    backgroundColor: nativeTheme.shouldUseDarkColors
+      ? config.windows.defaultBackgroundColors.dark
+      : config.windows.defaultBackgroundColors.light,
   };
 
   if (process.platform === 'darwin') {
