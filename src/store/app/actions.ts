@@ -2,7 +2,7 @@ import { Action } from 'redux';
 
 import {
   SET_PLATFORM,
-} from './types';
+} from './actionTypes';
 
 interface SetPlatform extends Action<typeof SET_PLATFORM> {
   platform: string;

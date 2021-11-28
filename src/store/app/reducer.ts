@@ -1,12 +1,11 @@
 import { Reducer } from 'redux';
 
 import { Actions } from './actions';
-import initialState from './initialState';
+import { State, initialState } from './state';
 
 import {
-  State,
   SET_PLATFORM,
-} from './types';
+} from './actionTypes';
 
 const reducer: Reducer<State, Actions> = (
   state = initialState,
