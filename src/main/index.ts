@@ -12,17 +12,15 @@ import checkForUpdates from './lib/checkForUpdates';
 
 let app: Electron.App;
 
-const onWindowAllClosed = (): void => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-};
-
 export default (_app: Electron.App): void => {
   app = _app;
   app.setName(config.app.name);
 
-  app.on('window-all-closed', onWindowAllClosed);
+  app.on('window-all-closed', (): void => {
+    if (process.platform !== 'darwin') {
+      app.quit();
+    }
+  });
 
   app.whenReady().then(async (): Promise<void> => {
     const initializeAppPath = 'file://' + path.join(__dirname, '/workers/', 'initializeApp.html');
