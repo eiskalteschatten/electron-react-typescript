@@ -6,8 +6,8 @@
   "scripts": {
     "build:react": "react-scripts build",
     "build:electron": "tsc --project tsconfig.electron.json",
-    "prebuild": "npm run copyassets",
     "build": "npm run build:react && npm run build:electron",
+    "postbuild": "npm run copyassets",
     "copyassets": "node ./build-scripts/copyassets.js",
     "prestart": "npm run copyassets && npm run build:electron",
     "start": "concurrently \"cross-env BROWSER=none npm run start:react\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=development electron .\"",
