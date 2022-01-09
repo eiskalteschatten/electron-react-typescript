@@ -30,6 +30,11 @@
     "appId": "com.alexseifert.electronReactTypeScript",
     "buildDependenciesFromSource": true,
     "files": [
+      "!*.code-workspace",
+      "!.github",
+      "!.husky",
+      "!.vscode",
+      "!build-scripts",
       "build"
     ],
     "directories": {
