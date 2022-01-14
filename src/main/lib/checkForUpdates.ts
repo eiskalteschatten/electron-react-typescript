@@ -2,7 +2,7 @@ import { dialog, shell } from 'electron';
 import axios from 'axios';
 import log from 'electron-log';
 
-import config from '../../config';
+import config from '../../config/main';
 
 interface GithubUpdateResponse {
   html_url: string;

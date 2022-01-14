@@ -2,7 +2,7 @@ import { BrowserWindow, BrowserWindowConstructorOptions, Menu, nativeTheme, scre
 import path from 'path';
 import log from 'electron-log';
 
-import config from '../../config';
+import config from '../../config/main';
 import initializeRenderer from '../initializeRenderer';
 import getAppMenu from '../menus/appMenus/main';
 
