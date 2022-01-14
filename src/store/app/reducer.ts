@@ -5,6 +5,7 @@ import { State, initialState } from './state';
 
 import {
   SET_PLATFORM,
+  SET_PREFERS_DARK_MODE,
 } from './actionTypes';
 
 const reducer: Reducer<State, Actions> = (
@@ -16,6 +17,11 @@ const reducer: Reducer<State, Actions> = (
       return {
         ...state,
         platform: action.platform,
+      };
+    case SET_PREFERS_DARK_MODE:
+      return {
+        ...state,
+        prefersDarkMode: action.prefersDarkMode,
       };
     default:
       return state;
