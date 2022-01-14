@@ -19,7 +19,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true
   },
   "include": [
     "src"
