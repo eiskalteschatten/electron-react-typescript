@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ../build
+cd ../build-resources
 
 ORIGINAL_FILE=icon.png
 ICONSET_FILE=icon.iconset
