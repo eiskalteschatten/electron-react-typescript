@@ -17,10 +17,10 @@
     "postinstall": "electron-builder install-app-deps",
     "prepack": "npm run build",
     "pack": "electron-builder --dir",
-    "pack:skipsigning": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run pack",
+    "pack:skipsigning": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false npm run pack",
     "predist": "npm run build",
     "dist": "electron-builder",
-    "dist:skipsigning": "CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist",
+    "dist:skipsigning": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
