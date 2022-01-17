@@ -55,6 +55,7 @@ export default async (): Promise<BrowserWindow> => {
     newWindow.on('resized', (e: Event) => onWindowChanged(e, {
       windowWidth: newWindow.getBounds().width,
       windowHeight: newWindow.getBounds().height,
+      windowIsMaximized: false,
     }));
     newWindow.on('moved', (e: Event) => onWindowChanged(e, {
       windowX: newWindow.getBounds().x,
