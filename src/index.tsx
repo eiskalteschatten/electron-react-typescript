@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import 'bootstrap/scss/bootstrap.scss';
 
 import './i18n';
 import App from './App';
@@ -9,7 +8,8 @@ import store from './store';
 import * as serviceWorker from './serviceWorker';
 import './eventsFromMain';
 
-import './index.scss';
+import './assets/css/reboot.css';
+import './scss/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
