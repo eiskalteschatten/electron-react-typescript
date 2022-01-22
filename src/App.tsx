@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { setPrefersDarkMode } from './store/app/actions';
@@ -18,11 +18,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='*' element={<MainLayout />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
