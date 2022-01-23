@@ -1,6 +1,7 @@
-import { t } from 'i18next';
-
 import { MenuItem, nonMacPlatforms } from '../../menuBuilder';
+import i18n from '../../../../i18n/main';
+
+const { t } = i18n;
 
 export default (): MenuItem => {
   const submenuItems: MenuItem[] = [

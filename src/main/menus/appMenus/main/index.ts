@@ -1,5 +1,4 @@
 import { MenuItemConstructorOptions } from 'electron';
-import { t } from 'i18next';
 
 import menuBuilder from '../../menuBuilder';
 import appMenuItems from './app';
@@ -7,6 +6,9 @@ import fileMenuItems from './file';
 import editMenuItems from './edit';
 import viewMenuItems from './view';
 import helpMenuItems from './help';
+import i18n from '../../../../i18n/main';
+
+const { t } = i18n;
 
 export default (): MenuItemConstructorOptions[] => {
   const template: MenuItemConstructorOptions[] = [

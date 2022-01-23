@@ -1,7 +1,9 @@
 // import { BrowserWindow, MenuItem as ElectronMenuItem } from 'electron';
-import { t } from 'i18next';
 
 import { MenuItem } from '../../menuBuilder';
+import i18n from '../../../../i18n/main';
+
+const { t } = i18n;
 
 export default (): MenuItem => {
   const submenuItems: MenuItem[] = [

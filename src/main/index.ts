@@ -4,8 +4,8 @@ import log from 'electron-log';
 
 import './eventsFromRenderer';
 import './workers';
-import '../i18n';
 
+import { setupi18n } from '../i18n/main';
 import config from '../config';
 import openMainWindow from './windows/main';
 import checkForUpdates from './lib/checkForUpdates';
@@ -23,6 +23,8 @@ export default (_app: Electron.App): void => {
   });
 
   app.whenReady().then(async (): Promise<void> => {
+    setupi18n();
+
     const initializeAppPath = 'file://' + path.join(__dirname, './workers/initializeApp.html');
 
     const initializeAppWindow = new BrowserWindow({
