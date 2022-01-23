@@ -1,4 +1,4 @@
-import { shell } from 'electron';
+import { app, shell } from 'electron';
 import { t } from 'i18next';
 
 import config from '../../../../config';
@@ -18,6 +18,17 @@ export default (): MenuItem => {
     },
     {
       platforms: nonMacPlatforms,
+      item: { type: 'separator' },
+    },
+    {
+      item: {
+        label: t('common:showLogFiles'),
+        click: (): void => {
+          shell.showItemInFolder(app.getPath('logs'));
+        },
+      },
+    },
+    {
       item: { type: 'separator' },
     },
     {
