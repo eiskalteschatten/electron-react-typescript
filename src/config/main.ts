@@ -7,13 +7,13 @@ let storagePath = '';
 
 switch (process.platform) {
   case 'darwin':
-    storagePath = path.join(os.homedir(), 'Library', 'Application Support', 'MailCoach');
+    storagePath = path.join(os.homedir(), 'Library', 'Application Support', 'electron-react-typescript');
     break;
   case 'win32':
-    storagePath = path.join(os.homedir(), 'AppData', 'Roaming', 'mailcoach');
+    storagePath = path.join(os.homedir(), 'AppData', 'Roaming', 'electron-react-typescript');
     break;
   default:
-    storagePath = path.join(os.homedir(), '.mailcoach');
+    storagePath = path.join(os.homedir(), '.electron-react-typescript');
     break;
 }
 
