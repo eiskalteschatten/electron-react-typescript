@@ -25,7 +25,7 @@ export default (_app: Electron.App): void => {
   app.whenReady().then(async (): Promise<void> => {
     setupi18n();
 
-    const initializeAppPath = 'file://' + path.join(__dirname, './workers/initializeApp.html');
+    const initializeAppPath = 'file://' + path.join(__dirname, './workers/initializeApp/index.html');
 
     const initializeAppWindow = new BrowserWindow({
       width: 400,

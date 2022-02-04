@@ -3,7 +3,7 @@ import fs, { promises as fsPromises } from 'fs';
 import path from 'path';
 import log from 'electron-log';
 
-import config from '../../config/main';
+import config from '../../../config/main';
 
 ipcMain.on('initializeApp', async (e: IpcMainEvent): Promise<void> => {
   if (!fs.existsSync(config.storagePath)) {
