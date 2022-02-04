@@ -13,7 +13,7 @@ export const launchWorkerWindow = <T>(htmlPath: string, data?: T) => {
   });
 
   if (data) {
-    window.once('show', () => {
+    window.webContents.once('did-finish-load', () => {
       window.webContents.send('workerSendData', data);
     });
   }
