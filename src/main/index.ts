@@ -1,5 +1,4 @@
 import path from 'path';
-import { BrowserWindow } from 'electron';
 import log from 'electron-log';
 
 import './eventsFromRenderer';
@@ -9,6 +8,7 @@ import { setupi18n } from '../i18n/main';
 import config from '../config';
 import openMainWindow from './windows/main';
 import checkForUpdates from './lib/checkForUpdates';
+import { launchWorkerWindow } from './lib/workerHelpers';
 
 let app: Electron.App;
 
@@ -26,18 +26,7 @@ export default (_app: Electron.App): void => {
     setupi18n();
 
     const initializeAppPath = 'file://' + path.join(__dirname, './workers/initializeApp/index.html');
-
-    const initializeAppWindow = new BrowserWindow({
-      width: 400,
-      height: 400,
-      show: false,
-      webPreferences: {
-        contextIsolation: true,
-        preload: path.join(__dirname, './preload.js'),
-      },
-    });
-
-    initializeAppWindow.loadURL(initializeAppPath);
+    launchWorkerWindow(initializeAppPath);
 
     if (process.env.NODE_ENV === 'development') {
       const { default: installExtension, REDUX_DEVTOOLS } = await import('electron-devtools-installer');
