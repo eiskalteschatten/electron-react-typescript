@@ -108,7 +108,7 @@
     "wait-on": "^6.0.0"
   },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "clsx": "^1.1.1",
     "electron-log": "^4.4.4",
     "i18next": "^21.6.6",
