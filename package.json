@@ -107,6 +107,7 @@
     "wait-on": "^6.0.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.26.0",
     "clsx": "^1.1.1",
     "electron-log": "^4.4.4",
@@ -116,8 +117,6 @@
     "react-i18next": "^11.15.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
-    "redux": "^4.1.2",
-    "redux-thunk": "^2.4.1"
+    "react-scripts": "^5.0.0"
   }
 }
