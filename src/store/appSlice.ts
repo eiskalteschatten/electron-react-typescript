@@ -13,7 +13,6 @@ const initialState: State = {
 export const slice = createSlice({
   name: 'app',
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     setPlatform: (state, action: PayloadAction<string>) => {
       state.platform =  action.payload;
