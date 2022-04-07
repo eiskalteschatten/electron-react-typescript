@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface AppState {
+export interface State {
   platform: string;
   prefersDarkMode?: boolean;
 }
 
-const initialState: AppState = {
+const initialState: State = {
   platform: '',
   prefersDarkMode: false,
 };
