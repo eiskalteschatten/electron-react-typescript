@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import { useAppDispatch } from './store/hooks';
-import { setPrefersDarkMode } from './store/appSlice';
+import { setPrefersDarkMode } from './store/slices/appSlice';
 
 import MainLayout from './components/MainLayout';
 

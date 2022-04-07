@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
 
-import app from './appSlice';
+import app from './slices/appSlice';
 
 const reducer = combineReducers({
   app,
