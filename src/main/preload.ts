@@ -1,11 +1,12 @@
 import { contextBridge, ipcRenderer, shell } from 'electron';
 
-import config from '../config';
+import config from '../config/main';
 
 contextBridge.exposeInMainWorld(
   'api',
   {
     send: ipcRenderer.send,
+    sendSync: ipcRenderer.sendSync,
     on: (channel: any, callback: any): void => {
       ipcRenderer.on(channel, callback);
     },
