@@ -12,8 +12,5 @@ declare global {
     shell: {
       openExternal: (url: string) => Promise<void>;
     };
-    app: {
-      getVersion: () => string;
-    };
   }
 }
