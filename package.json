@@ -26,7 +26,7 @@
   },
   "build": {
     "productName": "ElectronReactTypeScript",
-    "copyright": "Copyright © 2021 Alex Seifert",
+    "copyright": "Copyright © 2022 Alex Seifert",
     "appId": "com.alexseifert.electronReactTypeScript",
     "buildDependenciesFromSource": true,
     "files": [
