@@ -3,6 +3,7 @@ import { app, shell } from 'electron';
 import config from '../../../../config';
 import checkForUpdates from '../../../lib/checkForUpdates';
 import { MenuItem, nonMacPlatforms } from '../../menuBuilder';
+import openAboutWindow from '../../../windows/about';
 import i18n from '../../../../i18n/main';
 
 const { t } = i18n;
@@ -64,8 +65,10 @@ export default (): MenuItem => {
     {
       platforms: nonMacPlatforms,
       item: {
-        role: 'about',
         label: t('appMenu:aboutApp', { appName: config.app.name }),
+        click: (): void => {
+          openAboutWindow();
+        },
       },
     },
   ];
