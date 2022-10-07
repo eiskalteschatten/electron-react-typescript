@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import { useAppDispatch } from './store/hooks';
 import { setPrefersDarkMode } from './store/slices/appSlice';
 
-import MainLayout from './components/layouts/MainLayout';
+import Router from './router';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -19,9 +19,7 @@ const App: React.FC = () => {
 
   return (
     <HashRouter>
-      <Routes>
-        <Route path='*' element={<MainLayout />} />
-      </Routes>
+      <Router />
     </HashRouter>
   );
 };
