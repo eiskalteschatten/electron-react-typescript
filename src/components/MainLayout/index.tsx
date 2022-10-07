@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { State } from '../../store';
 import Titlebar from '../Titlebar';
 
-import styles from './MainLayout.module.scss';
+import styles from './styles.module.scss';
 
 const MainLayout: React.FC = () => {
   const platform = useSelector((state: State) => state.app.platform);
