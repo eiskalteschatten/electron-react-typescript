@@ -1,5 +1,7 @@
+@import "../../../../../scss/variables";
+
 .titlebar {
-  height: 22px;
+  height: $toolbarHeight;
   width: 100%;
   left: 0;
   position: fixed;
