@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import clsx from 'clsx';
 
-import { State } from '../../store';
-import Titlebar from '../Titlebar';
+import { State } from '../../../store';
+import Titlebar from './components/Titlebar';
 
 import styles from './styles.module.scss';
 

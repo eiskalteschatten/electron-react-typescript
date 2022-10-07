@@ -4,7 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useAppDispatch } from './store/hooks';
 import { setPrefersDarkMode } from './store/slices/appSlice';
 
-import MainLayout from './components/MainLayout';
+import MainLayout from './components/layouts/MainLayout';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
