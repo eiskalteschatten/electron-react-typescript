@@ -26,7 +26,7 @@ export default {
   },
   storagePath,
   updates: {
-    url: 'https://api.github.com/repos/eiskalteschatten/mailcoach-electron/releases',
+    url: 'https://api.github.com/repos/eiskalteschatten/electron-react-typescript/releases',
   },
   ...globalConfig,
 };
