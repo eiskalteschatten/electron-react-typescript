@@ -9,11 +9,6 @@ const { t } = i18n;
 
 export const WINDOW_ID = 'about';
 
-// TODO
-// const appIcon = process.platform === 'darwin'
-//   ? path.join(__dirname, '../../assets/images/icon-mac.png')
-//   : path.join(__dirname, '../../assets/images/icon.png');
-
 const appIcon = path.join(__dirname, '../../assets/images/icon128.png');
 
 const html = `
@@ -83,8 +78,7 @@ export default async (): Promise<BrowserWindow | undefined> => {
   const browserWindowOptions: BrowserWindowConstructorOptions = {
     width: 265,
     height: 260,
-    // TODO
-    // icon: path.join(__dirname, '../../assets/images/window-icon.png'),
+    icon: path.join(__dirname, '../../assets/images/icon128.png'),
     fullscreenable: false,
     maximizable: false,
     minimizable: false,
