@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { HashRouter } from 'react-router-dom';
 
 import { useAppDispatch } from './store/hooks';
-import { setPrefersDarkMode } from './store/slices/appSlice';
+import { setPrefersDarkMode } from './store/entities/app';
 
 import Router from './router';
 
