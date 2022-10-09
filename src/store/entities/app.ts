@@ -28,4 +28,4 @@ export const {
   setPrefersDarkMode,
 } = slice.actions;
 
-export default slice.reducer;
+export const reducer = slice.reducer;
