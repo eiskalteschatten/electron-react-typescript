@@ -60,6 +60,7 @@ export default async (): Promise<BrowserWindow> => {
     newWindow.on('moved', (e: Event) => onWindowChanged(e, {
       windowX: newWindow.getBounds().x,
       windowY: newWindow.getBounds().y,
+      windowIsMaximized: false,
     }));
     newWindow.on('maximize', (e: Event) => onWindowChanged(e, {
       windowIsMaximized: newWindow.isMaximized(),
