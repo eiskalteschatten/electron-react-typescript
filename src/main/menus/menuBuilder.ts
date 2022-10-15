@@ -20,7 +20,7 @@ const buildMenuItem = (menuItem: MenuItem): MenuItemConstructorOptions => {
   return {};
 };
 
-const buildMenu = (menuItems: MenuItem[]): MenuItemConstructorOptions[] => {
+export const buildMenu = (menuItems: MenuItem[]): MenuItemConstructorOptions[] => {
   const items = [];
 
   for (const menuItem of menuItems) {
