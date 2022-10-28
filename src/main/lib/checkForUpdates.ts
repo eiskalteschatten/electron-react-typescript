@@ -3,6 +3,9 @@ import axios from 'axios';
 import log from 'electron-log';
 
 import config from '../../config/main';
+import i18n from '../../i18n/main';
+
+const { t } = i18n;
 
 interface GithubUpdateResponse {
   html_url: string;
@@ -28,10 +31,10 @@ export default async (showNoUpdatesDialog = false): Promise<void> => {
 
         const result = await dialog.showMessageBox({
           type: 'info',
-          buttons: ['Download', 'Later'],
-          title: 'Update Available',
-          message: 'A new version of Glook is available',
-          detail: 'Would you like to download and install it?',
+          buttons: [t('updates:download'), t('updates:later')],
+          title: t('updates:updateAvailable'),
+          message: t('updates:aNewVersionIsAvailable'),
+          detail: t('updates:downloadAndInstallIt'),
         });
 
         if (result.response === 0) {
@@ -42,8 +45,8 @@ export default async (showNoUpdatesDialog = false): Promise<void> => {
         log.info(`No updates found: current version ${tagName}, latest release ${latestVersion.tag_name}`);
 
         dialog.showMessageBox({
-          message: 'There are currently no updates available.',
-          buttons: ['OK'],
+          message: t('updates:noUpdatesAvailable'),
+          buttons: [t('common:ok')],
           type: 'info',
           defaultId: 0,
           cancelId: 0,
