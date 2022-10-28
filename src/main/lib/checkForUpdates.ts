@@ -24,9 +24,18 @@ export default async (showNoUpdatesDialog = false): Promise<void> => {
     const tagName = `v${config.app.version}`;
 
     if (latestVersion) {
+      let updateFound = latestVersion.tag_name !== tagName && !latestVersion.draft && !latestVersion.prerelease;
       const checkForPrelease = config.app.version.includes('beta');
 
-      if (latestVersion.tag_name !== tagName && !latestVersion.draft && (!latestVersion.prerelease || checkForPrelease)) {
+      if (latestVersion.prerelease && checkForPrelease) {
+        const versionParts = config.app.version.split('.');
+        const currrentBetaNumber = Number(versionParts[versionParts.length - 1]);
+        const tagParts = latestVersion.tag_name.split('.');
+        const tagBetaNumber = Number(tagParts[tagParts.length - 1]);
+        updateFound = currrentBetaNumber < tagBetaNumber;
+      }
+
+      if (updateFound) {
         log.info(`Update found: current version ${tagName}, latest release ${latestVersion.tag_name}`);
 
         const result = await dialog.showMessageBox({
