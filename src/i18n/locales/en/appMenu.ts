@@ -7,6 +7,8 @@ export default {
   showAll: 'Show All',
   quitApp: 'Quit {{appName}}',
   edit: 'Edit',
+  undo: 'Undo',
+  redo: 'Redo',
   cut: 'Cut',
   copy: 'Copy',
   paste: 'Paste',

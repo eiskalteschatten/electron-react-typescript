@@ -9,6 +9,19 @@ export default (): MenuItem => {
   const submenuItems: MenuItem[] = [
     {
       item: {
+        label: t('appMenu:undo'),
+        role: 'undo',
+      },
+    },
+    {
+      item: {
+        label: t('appMenu:redo'),
+        role: 'redo',
+      },
+    },
+    { item: { type: 'separator' } },
+    {
+      item: {
         label: t('appMenu:cut'),
         role: 'cut',
       },
